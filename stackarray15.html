@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack Using Array</title>
+</head>
+<body>
+<h2> stack implementation </h2>
+   <script>
+class Stackarray {
+    constructor() {
+        this.items = [];
+    }
+     add(element) {
+        return this.items.push(element);
+    }
+     remove() {
+        if(this.items.length > 0) {
+            return this.items.pop();
+        }
+    }
+     peek() {
+        return this.items[this.items.length - 1];
+    }
+    
+   isEmpty(){
+       return this.items.length == 0;
+    }
+
+    printStackarray(){
+    var str = "";
+    for (var i = 0; i < this.items.length; i++)
+        str += this.items[i] + " ";
+    return str;
+}
+    
+}
+
+let stackarray = new Stackarray();
+stackarray.add(3);
+stackarray.add(4);
+stackarray.add(5);
+stackarray.add(7);
+console.log("The elements in stack");
+console.log(stackarray.printStackarray());
+
+console.log("After deleting the element from stack");
+stackarray.remove();
+console.log(stackarray.printStackarray());
+
+console.log(stackarray.peek());
+
+console.log(stackarray.isEmpty());
+
+</script>
+</body>
+</html>
